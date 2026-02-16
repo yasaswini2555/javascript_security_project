@@ -42,11 +42,11 @@
 // app.get("/users", (req, res) => {
 //   res.send(users);
 // });
-// app.get("users/:id", (req, res) => {
-//   const user = users.find((u) => u.id == req.params.id);
-//   if (!user) return res.status(404).send("User not found");
-//   res.send(user);
-// });
+app.get("users/:id", (req, res) => {
+  const user = users.find((u) => u.id == req.params.id);
+  if (!user) return res.status(404).send("User not found");
+  res.send(user);
+});
 // app.put("/users/:id", (req, res) => {
 //   const user = users.find((u) => u.id == req.params.id);
 //   if (!user) return res.status(404).send("User not found");
